@@ -232,6 +232,7 @@ font-family: 'Fraunces', serif; font-weight: 600; font-size: 20px; color: var(--
 display: flex; align-items: baseline; gap: 6px; white-space: nowrap;
 }
 .wordmark span { color: var(--gold); }
+.wordmark-logo { align-self: center; height: 30px; width: auto; display: block; }
 nav.site-nav { display: flex; gap: 22px; font-size: 14.5px; font-weight: 500; }
 nav.site-nav a { color: var(--on-navy-soft); text-decoration: none; }
 nav.site-nav a:hover, nav.site-nav a:focus-visible { color: var(--on-navy); }
@@ -276,6 +277,16 @@ color: #fff; flex-shrink: 0;
 
 /* Hero */
 .hero-band { background: linear-gradient(160deg, var(--navy-band) 0%, var(--navy-band-2) 100%); color: var(--on-navy); }
+.hero-band { position: relative; overflow: hidden; }
+.hero-watermark {
+position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+width: clamp(380px, 46vw, 680px); height: auto; opacity: 0.06;
+filter: brightness(0) invert(1); pointer-events: none; z-index: 0; user-select: none;
+}
+.hero { position: relative; z-index: 1; }
+@media (max-width: 720px) {
+.hero-watermark { width: clamp(260px, 70vw, 420px); opacity: 0.05; }
+}
 .hero {
 padding-block: clamp(44px, 7vw, 76px) clamp(40px, 6vw, 60px);
 display: grid; gap: 28px;
@@ -503,7 +514,7 @@ border: 1px solid var(--border); background: var(--paper); color: var(--ink);
 
 <header class="site">
 <div class="header-row">
-<div class="wordmark">Apartamentando<span>·</span><span style="font-size:13px;font-weight:500;color:var(--on-navy-soft);font-family:'IBM Plex Sans',sans-serif;">MCMV</span></div>
+<div class="wordmark"><img class="wordmark-logo" src="img/logo-mark.png" alt="" width="36" height="26">Apartamentando<span>·</span><span style="font-size:13px;font-weight:500;color:var(--on-navy-soft);font-family:'IBM Plex Sans',sans-serif;">MCMV</span></div>
 <nav class="site-nav">
 <a href="#como-funciona">Como funciona</a>
 <a href="#regioes">Regiões</a>
@@ -522,6 +533,7 @@ border: 1px solid var(--border); background: var(--paper); color: var(--ink);
 
 <main>
 <div class="hero-band">
+<img class="hero-watermark" src="img/logo-mark.png" alt="" aria-hidden="true">
 <div class="wrap hero">
 <div class="hero-top">
 <div class="hero-copy">
