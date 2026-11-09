@@ -224,7 +224,7 @@ background: var(--navy-band);
 border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 .header-row {
-max-width: 1120px; margin-inline: auto; padding: 14px 20px;
+max-width: 1200px; margin-inline: auto; padding: 14px 20px;
 display: flex; align-items: center; justify-content: space-between; gap: 16px;
 }
 .wordmark {
@@ -232,9 +232,10 @@ font-family: 'Fraunces', serif; font-weight: 600; font-size: 20px; color: var(--
 display: flex; align-items: baseline; gap: 6px; white-space: nowrap;
 }
 .wordmark span { color: var(--gold); }
-.wordmark-logo { align-self: center; height: 30px; width: auto; display: block; }
-nav.site-nav { display: flex; gap: 22px; font-size: 14.5px; font-weight: 500; }
-nav.site-nav a { color: var(--on-navy-soft); text-decoration: none; }
+.wordmark-logo { align-self: center; height: 28px; width: auto; display: block; flex-shrink: 0; }
+.wordmark { flex-shrink: 0; }
+nav.site-nav { display: flex; gap: 18px; font-size: 14.5px; font-weight: 500; flex-shrink: 0; }
+nav.site-nav a { color: var(--on-navy-soft); text-decoration: none; white-space: nowrap; }
 nav.site-nav a:hover, nav.site-nav a:focus-visible { color: var(--on-navy); }
 .btn {
 display: inline-flex; align-items: center; gap: 8px;
@@ -514,7 +515,7 @@ border: 1px solid var(--border); background: var(--paper); color: var(--ink);
 
 <header class="site">
 <div class="header-row">
-<div class="wordmark"><img class="wordmark-logo" src="img/logo-mark.png" alt="" width="36" height="26">Apartamentando<span>·</span><span style="font-size:13px;font-weight:500;color:var(--on-navy-soft);font-family:'IBM Plex Sans',sans-serif;">MCMV</span></div>
+<div class="wordmark"><img class="wordmark-logo" src="img/logo-mark.png" alt="" width="38" height="28">Apartamentando<span>·</span><span style="font-size:13px;font-weight:500;color:var(--on-navy-soft);font-family:'IBM Plex Sans',sans-serif;">MCMV</span></div>
 <nav class="site-nav">
 <a href="#como-funciona">Como funciona</a>
 <a href="#regioes">Regiões</a>
